@@ -4,7 +4,15 @@
     <title>Home</title>
 </head>
 <body>
-    <h1>Welcome to FastAPI App!</h1>
-    <p><a href="/login">Login</a> | <a href="/register">Register</a></p>
+    <header>
+        <h1>Welcome to Merlino!</h1>
+    </header>
+    <main>
+        <h2>What's for?</h2>
+        <p>Merlino is a simple wep app to play to the Avalon card game.</p>
+        <p><a href="/login">Login</a> | <a href="/register">Register</a></p>
+    </main>
+
+    {% include "footer.html" %}
 </body>
 </html>
