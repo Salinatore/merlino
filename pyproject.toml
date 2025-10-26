@@ -1,0 +1,11 @@
+[project]
+name = "merlino"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.13"
+dependencies = [
+    "bcrypt>=5.0.0",
+    "fastapi[standard]>=0.120.0",
+    "itsdangerous>=2.2.0",
+    "sqlalchemy>=2.0.44",
+]

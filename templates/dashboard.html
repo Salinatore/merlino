@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Dashboard</title>
+</head>
+<body>
+    <h1>Available Games</h1>
+
+    {% if games %}
+        {% for game in games %}
+        <div>
+            <h3>{{ game.name }}</h3>
+            <form action="/games/join/{{ game.id }}" method="post">
+                <button type="submit">Join Game</button>
+            </form>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>No games available. Create the first one!</p>
+    {% endif %}
+
+    <h2>Create New Game</h2>
+    <form action="/games/create" method="post">
+        <input type="text" name="name" placeholder="Game name" required>
+        <button type="submit">Create Game</button>
+    </form>
+</body>
+</html>
